@@ -9,11 +9,7 @@ import { Recipe, Ingredient } from 'src/types';
 export class HomePageComponent implements OnInit {
   recipes: Recipe[] = []
 
-  ngOnInit(): void {
-    this.getRecipes()
-  }
-
-  async getRecipes() {
+  async ngOnInit(): Promise<void> {
     let response = await fetch('http://localhost:8080/api/recipes')
     this.recipes = await response.json()
   }
