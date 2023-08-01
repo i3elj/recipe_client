@@ -1,8 +1,9 @@
-export type Recipe = {
-    Id: number,
-    Name: string,
-    Ingredients: Ingredient[],
-    Preparation: string
+export class Recipe {
+    Id: number = 0
+    Name: string = ""
+    Ingredients: Ingredient[] = []
+    Image_url: string = ""
+    Preparation: string = ""
 }
 
 export type Ingredient = {
