@@ -3,18 +3,8 @@
 <app-navbar/>
 
 <section class="main-content-wrapper">
-    <div id="item-wrapper" *ngFor="let recipe of recipes">
-        <div class="gradient"></div>
-        <img title="recipe image" src="/assets/pao-caseiro.jpg">
-        <div id="item-content">
-            <h2 title="{{recipe.Name}}">{{recipe.Name}}</h2>
-            <div id="item-ingredients">
-                <p *ngFor="let ingredient of recipe.Ingredients">
-                    {{ingredient.What}},
-                </p>
-            </div>
-            <a routerLink="/recipe/{{recipe.Id}}">Como preparar?</a>
-        </div>
+    <div *ngFor="let recipe of recipes">
+        <app-recipe-item-container [recipe]="recipe"/>
     </div>
 </section>
 
