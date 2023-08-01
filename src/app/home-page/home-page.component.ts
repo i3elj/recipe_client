@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from 'src/types';
+import { Recipe, Ingredient } from 'src/types';
 
 @Component({
   selector: 'app-home-page',
@@ -9,12 +9,12 @@ import { Recipe } from 'src/types';
 export class HomePageComponent implements OnInit {
   recipes: Recipe[] = []
 
+  ngOnInit(): void {
+    this.getRecipes()
+  }
+
   async getRecipes() {
     let response = await fetch('http://localhost:8080/api/recipes')
     this.recipes = await response.json()
-  }
-
-  ngOnInit(): void {
-    this.getRecipes()
   }
 }
