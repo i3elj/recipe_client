@@ -1,0 +1,54 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav #main-content h1 {
+  font-weight: 500;
+}
+
+::placeholder {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+input[name='search'] {
+  height: 36px;
+  width: 250px;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: none;
+  transition: 200ms;
+}
+
+input[name='search']:focus {
+  outline: none;
+  border-bottom-color: white;
+  color: white;
+}
+
+button {
+  width: 250;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: none;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+button:hover {
+  color: white;
+  border-bottom-color: white;
+}
+
+button > span {
+  font-size: 24px;
+  margin-right: 12px;
+}

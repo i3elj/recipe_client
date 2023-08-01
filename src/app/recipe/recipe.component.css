@@ -1,0 +1,33 @@
+.ingredient-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ingredient-container > img {
+  width: 40%;
+  max-height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.ingredients > ul > li {
+    display: flex;
+    width: 100%;
+}
+
+.ingredients > ul > li > span {
+    width: 178px;
+    white-space: nowrap;
+}
+
+.preparation-container {
+  padding: 40px;
+}
+
+.preparation-container > p {
+  text-align: justify;
+}

@@ -1,0 +1,20 @@
+<main>
+    <app-navbar shouldGoBack="true"></app-navbar>
+    <section class="main-content-wrapper">
+        <h1>{{this.recipe?.Name}}</h1>
+        <div class="ingredient-container">
+            <div class="ingredients">
+                <ul>
+                    <li *ngFor="let ingredient of this.recipe?.Ingredients">
+                        <span>{{ingredient.What}}</span>
+                        <span>{{ingredient.Amount}}</span>
+                    </li>
+                </ul>
+            </div>
+            <img src="assets/pao-caseiro.jpg">
+        </div>
+        <div class="preparation-container">
+            <p>{{this.recipe?.Preparation}}</p>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,10 @@
+<nav>
+  <h1>API Receitas</h1>
+
+  <div *ngIf="shouldGoBack == 'true'">
+    <button (click)="this.goBack()"><span>←</span> Retornar para pagina inicial</button>
+  </div>
+  <div *ngIf="shouldGoBack == 'false'">
+    <input type="text" name="search" [value]="searchQuery" placeholder="Pesquise por uma receita" />
+  </div>
+</nav>
