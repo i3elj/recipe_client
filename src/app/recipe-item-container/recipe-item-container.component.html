@@ -1,0 +1,12 @@
+<div id="item-wrapper" >
+    <div id="{{recipe.Image_url.split('.')[0]}}" class="gradient"></div>
+    <div id="item-content">
+        <h2 title="{{recipe.Name}}">{{recipe.Name}}</h2>
+        <div id="item-ingredients">
+            <p *ngFor="let ingredient of recipe.Ingredients">
+                {{ingredient.What}},
+            </p>
+        </div>
+        <a routerLink="/recipe/{{recipe.Id}}">Como preparar?</a>
+    </div>
+</div>

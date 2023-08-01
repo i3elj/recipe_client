@@ -1,7 +1,7 @@
 <main>
     <app-navbar shouldGoBack="true"></app-navbar>
     <section class="main-content-wrapper">
-        <h1>{{this.recipe?.Name}}</h1>
+        <h1>{{this.recipe.Name}}</h1>
         <div class="ingredient-container">
             <div class="ingredients">
                 <ul>
@@ -11,10 +11,10 @@
                     </li>
                 </ul>
             </div>
-            <img src="assets/pao-caseiro.jpg">
+            <img id="recipe_image">
         </div>
         <div class="preparation-container">
-            <p>{{this.recipe?.Preparation}}</p>
+            <p>{{this.recipe.Preparation}}</p>
         </div>
     </section>
 </main>
