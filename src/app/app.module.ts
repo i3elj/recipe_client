@@ -7,6 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RecipeComponent } from './recipe/recipe.component';
+import { RecipeItemContainerComponent } from './recipe-item-container/recipe-item-container.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RecipeComponent } from './recipe/recipe.component';
     HomePageComponent,
     NavbarComponent,
     NotfoundComponent,
-    RecipeComponent
+    RecipeComponent,
+    RecipeItemContainerComponent
   ],
   imports: [
     BrowserModule,
