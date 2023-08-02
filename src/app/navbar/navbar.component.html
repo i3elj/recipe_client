@@ -1,10 +1,13 @@
 <nav>
-  <h1>API Receitas</h1>
+  <a class="h1" href="/">API Receitas</a>
 
-  <div *ngIf="shouldGoBack == 'true'">
+  <div id="input-container" *ngIf="shouldGoBack == 'true'">
     <button (click)="this.goBack()"><span>←</span> Retornar para pagina inicial</button>
   </div>
-  <div *ngIf="shouldGoBack == 'false'">
-    <input type="text" name="search" [value]="searchQuery" placeholder="Pesquise por uma receita" />
-  </div>
+  <form method="GET" action="http://localhost:4200/" id="input-container" *ngIf="shouldGoBack == 'false'">
+    <input type="text" name="name" [value]="searchQuery" placeholder="Pesquise por um nome" />
+    <span>ou</span>
+    <input type="text" name="ingredients" [value]="searchQuery" placeholder="ingredientes" />
+    <input type="submit" style="display: none" />
+  </form>
 </nav>
